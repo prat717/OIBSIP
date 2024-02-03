@@ -28,14 +28,20 @@
     font-weight: 200;
 }
 
-*{
+* {
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-
+    font-family: 'montes';
 }
+
 body {
+    width: 100vw;
+    height: 100vh;
     background-color: black;
+    display: grid;
+    place-items: center;
+
 }
 
 h1 {
@@ -43,7 +49,10 @@ h1 {
     font-size: 2.5em;
     font-family: 'montes', sans-serif;
     font-weight: 400;
+    margin-bottom: 5%;
+
 }
+
 h3 {
     color: white;
     font-size: 1.2em;
@@ -59,45 +68,70 @@ h3 {
     align-items: center;
 }
 
-span{
+span {
     color: white;
     font-weight: 500;
 }
 
-.hero{
-    flex-direction: column;
-    justify-content: start;
-    gap: 10vh;
-    padding-top: 3em;
-    overflow: hidden;
+
+form {
+    background-color: rgba(41, 41, 41, 0.476);
+    padding: 5rem;
+    height: 60vh;
 }
 
-.temp-wrapper{
-    background-color: rgba(20, 20, 20, 0.385);
-    padding: 2em;
-    border-radius: 6px;
-    gap: 2em;
-}
 
-.cel, .fah{
-    flex-direction: column;
-    align-items: start;
-}
 
-input {
+#temp,
+#tempopt {
+
     outline: none;
     border: none;
-    border-radius: 3px;
-    height: 2em;
-    width: 8em;
-    padding: 1em;
-    font-size: 2em;
-    background-color: rgb(25, 25, 25);
+    font-size: 1.5rem;
+    background-color: rgb(41, 41, 41);
+    margin: 1.5rem 0;
+}
+
+#temp {
+    padding: 0.5rem 1rem;
     color: white;
+    font-weight: 400;
+    width: 40%;
+}
+
+#temp::placeholder {
+    color: rgb(86, 86, 86);
+
+
+}
+
+#tempopt {
+    padding: 0.5rem 1rem;
+    color: grey;
+    font-weight: 400;
+}
+
+#submit{
+    background-color: rgb(200, 0, 193);
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#result-dis{
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    display: block;
+    
+
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-    margin: 0;
+    
 }

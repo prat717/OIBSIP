@@ -1,4 +1,2 @@
-# mohite
-stock website
-
-Effectively made this site for the branding of 'Mohite Trading', and also for making payment processing for the stock call subsrciptions.
+# oibsip_taskno_1
+Task 1- Landing page

@@ -11,23 +11,25 @@
 </head>
 
 <body>
-    <section class="hero flex">
+
+
+    <form id="tempcal" onsubmit="calculateTemp (); return false">
         <h1>Convert <span>here.</span></h1>
-        <div class="temp-wrapper flex">
-            <div class="cel flex">
-                <h3>
-                    Celcius
-                </h3>
-                <input type="number" id="cel">
-            </div>
-            <div class="fah flex">
-                <h3>
-                    Fahrenheit
-                </h3>
-                <input type="number" id="fah">
-            </div>
-        </div>
-    </section>
+        <br />
+        <input type="number" id="temp" name="temp" placeholder="input">
+        <select name="tempopt" id="tempopt">
+            <option value="cel" name="cel">Celcius</option>
+            <option value="fah" name="fah">Fahrenheit</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" id="submit" name="temp" value="Convert">
+        <br>
+        <br>
+        <span id="result-dis" name="result-dis"></span>
+    </form>
+
+
 
 
 

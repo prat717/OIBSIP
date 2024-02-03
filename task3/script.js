@@ -1,20 +1,27 @@
-var cel = document.getElementById("cel");
-var fah = document.getElementById("fah");
+const calculateTemp = () => {
+    const numbertemp = document.getElementById('temp').value;
+    const tempselected = document.getElementById('tempopt');
+    const valuetemp = tempopt.options[tempselected.selectedIndex].value;
 
-cel.addEventListener('input', function () {
-    let c = this.value;
-    let f = (c * 9 / 5 + 32);
-    if(!Number.isInteger(f)){
-        f = f.toFixed(2);
-    }
-    fah.value = f;
-});
+    const celToFah = (cel) => {
 
-fah.addEventListener('input', function () {
-    let f = this.value;
-    let c = (f - 32) * 5 / 9;
-    if(!Number.isInteger(c)){
-        c = c.toFixed(2);
+        let fah = Math.round((cel * 9 / 5) + 32);
+        return fah;
     }
-    cel.value = c;
-});
+    const fahToCel = (fahren) => {
+
+        let celci = Math.round((fahren - 32) * 5 / 9);
+        return celci;
+    }
+
+
+    let result;
+
+    if (valuetemp === 'cel') {
+        result = celToFah(numbertemp);
+        document.getElementById('result-dis').innerHTML = `${result} Fahrenheit`;
+    } else {
+        result = fahToCel(numbertemp);
+        document.getElementById('result-dis').innerHTML = `${result} Celsius`;
+    }
+}
